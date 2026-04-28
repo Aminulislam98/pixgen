@@ -50,8 +50,10 @@ export default function SignupPage() {
       email,
       password,
       image,
-      //   callbackURL,
     });
+    if (!error) {
+      router.push("/");
+    }
     console.log(data, " this is form data");
   };
 

@@ -14,30 +14,6 @@ import {
 import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
-  const router = useRouter();
-
-  //   const onSubmit = async (e) => {
-  //     e.preventDefault();
-
-  //     const name = e.target.name.value;
-  //     const image = e.target.image.value;
-  //     const email = e.target.email.value;
-  //     const password = e.target.password.value;
-
-  //     const { data, error } = await authClient.signUp.email({
-  //       name,
-  //       email,
-  //       password,
-  //       image,
-  //     });
-
-  //     console.log({ data, error });
-
-  //     if (!error) {
-  //       router.push("/");
-  //     }
-  //   };
-
   const onSubmit = async (e) => {
     e.preventDefault();
 
