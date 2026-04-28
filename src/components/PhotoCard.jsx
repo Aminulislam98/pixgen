@@ -5,7 +5,7 @@ import { BiDownload } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa6";
 const PhotoCard = ({ photo }) => {
   return (
-    <Card className="border rounded-xl">
+    <Card className="border border-gray-300 rounded-2xl p-2">
       <div className="relative w-full aspect-square">
         <Image
           src={photo.imageUrl}
@@ -44,7 +44,7 @@ const PhotoCard = ({ photo }) => {
 
       <Link href={`/all-photos/${photo.id}`}>
         {" "}
-        <Button variant="outline" className={"w-full"}>
+        <Button variant="outline" className={"w-full border-gray-300"}>
           View
         </Button>
       </Link>
