@@ -11,7 +11,6 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -26,6 +25,11 @@ export default function SignInPage() {
       callbackURL: "/",
     });
     console.log(data, "this is user data");
+  };
+  const googleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -86,6 +90,10 @@ export default function SignInPage() {
             Reset
           </Button>
         </div>
+        <p className="text-center">Or</p>
+        <Button onClick={googleSignIn} variant="secondary">
+          Sign in by google
+        </Button>
       </Form>
     </Card>
   );
